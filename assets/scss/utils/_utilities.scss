@@ -760,3 +760,16 @@ $utilities: map-merge(
   )
 );
 // 開啟文字大小自適應
+$utilities: map-merge(
+  $utilities,
+  (
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+// 開啟尺寸大小自適應
