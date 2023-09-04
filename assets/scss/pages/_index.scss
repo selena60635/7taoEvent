@@ -1,0 +1,76 @@
+.header {
+  background: url(../../../img/headerBK.png) center/cover;
+  width: 100%;
+  height: 518px;
+  @include phone-s {
+    height: 350px;
+  }
+  &-info {
+    width: 69.4%;
+  }
+  &-menu {
+    .menu {
+      &-img {
+        width: 80px;
+        height: 80px;
+        @include phone-s {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      &-link {
+        aspect-ratio: 1 / 1; //等比例
+        &,
+        > * {
+          transition: all 0.2s ease-in-out;
+        }
+        &:hover {
+          box-shadow: 0 0 5px 2px $secondary;
+          & > .menu-img {
+            //看要不要一起變大
+            transform: scale(1.2);
+          }
+        }
+      }
+      &-more {
+        aspect-ratio: 1 / 1; //等比例
+        &,
+        > h3 {
+          transition: all 0.2s ease-in-out;
+        }
+        &:hover {
+          box-shadow: 0 0 5px 2px $secondary;
+          h3 {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+.album {
+  &-img {
+    height: 274px;
+  }
+  &-ticket {
+    width: 96px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    background: $light;
+    position: absolute;
+    top: -20px;
+    right: 97px;
+    rotate: -4deg;
+  }
+}
+.subscribe {
+  border: 2px solid $primary;
+  border-left: none;
+  @include phone {
+    border: 2px solid $primary;
+  }
+}

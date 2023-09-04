@@ -1,0 +1,23 @@
+.nav {
+  &-logo {
+    img {
+      width: 53px;
+      @include phone {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &-link:hover {
+    color: #9c9e18;
+  }
+  &-search {
+    width: 30.98%;
+    @include pad {
+      width: 50%;
+    }
+    @include phone-s {
+      width: 100%;
+    }
+  }
+}

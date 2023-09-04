@@ -1,0 +1,68 @@
+.no-hover:hover {
+  color: $primary;
+}
+.hover {
+  &-text-sec {
+    &:hover {
+      color: $secondary;
+      background: $primary;
+    }
+  }
+}
+.bg {
+  &-none {
+    background: transparent;
+  }
+}
+.border {
+  &-none {
+    border: none;
+  }
+  &__b {
+    &__3 {
+      border-bottom: 3px solid $primary;
+      @include phone-s {
+        border-bottom: 2px solid $primary;
+      }
+    }
+  }
+  &__3 {
+    border: 3px solid $primary;
+    @include phone-s {
+      border: 2px solid $primary;
+    }
+  }
+}
+.equal {
+  object-fit: cover;
+}
+.rotate {
+  &-r2 {
+    rotate: 2deg;
+  }
+  &-l2 {
+    rotate: -2deg;
+  }
+}
+.ls {
+  &-1 {
+    letter-spacing: 1.2px;
+  }
+  &-2 {
+    letter-spacing: 3.2px;
+  }
+}
+.w {
+  &-33 {
+    width: 33%;
+    @include pad {
+      width: auto;
+    }
+  }
+  &-30 {
+    width: 30%;
+    @include pad {
+      width: auto;
+    }
+  }
+}

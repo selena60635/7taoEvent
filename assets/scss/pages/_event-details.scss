@@ -1,0 +1,22 @@
+.event {
+  &-img {
+    height: 550px;
+    @include pad {
+      height: 360px;
+    }
+    @include phone-s {
+      height: 180px;
+    }
+  }
+  &-time {
+    width: 100px;
+    height: 2px;
+    background: $primary;
+    rotate: 120deg;
+    @include pad {
+      width: 50px;
+      top: 22px;
+      left: -80px;
+    }
+  }
+}

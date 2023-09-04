@@ -1,0 +1,116 @@
+.form-control {
+  &::placeholder {
+    color: $gray;
+    font-family: "Noto Sans TC", sans-serif;
+  }
+  &:focus {
+    box-shadow: 0 0 1.5px 2px $secondary;
+    border: 2px solid $primary;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+.card {
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  &-body {
+    padding: 12px 0 16px 0;
+    @include phone-s {
+      padding: 16px 0;
+    }
+  }
+  &-title {
+    margin-bottom: 12px;
+    @include phone-s {
+      margin-bottom: 8px;
+    }
+  }
+
+  &-img {
+    height: 255px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-footer {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid $primary;
+    border-bottom: 2px solid $primary;
+    .icon {
+      width: 24px;
+    }
+    &-link {
+      position: relative;
+      &::before {
+        transition: all 0.2s ease-in-out;
+        content: " ";
+        opacity: 0;
+        position: absolute;
+        background: $secondary;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        left: -12px;
+        z-index: -1;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+    @include phone-s {
+      padding: 8px 0;
+    }
+  }
+}
+.tag {
+  display: inline-block;
+  padding: 3px 23px 3px 23px;
+  height: 31px;
+  font-weight: bold;
+  border: 1px solid $primary;
+  line-height: 23px;
+  position: relative;
+  &::before {
+    content: " ";
+    width: 4px;
+    height: 31px;
+    background: $primary;
+    position: absolute;
+    top: -0.5px;
+    left: -1px;
+  }
+  &:hover {
+    background: $primary;
+    color: $light;
+    &::before {
+      background: $secondary;
+    }
+  }
+  @include phone-s {
+    padding: 3px 15px 3px 15px;
+    height: 28px;
+    font-size: 14px;
+    line-height: 20px;
+    &::before {
+      height: 28px;
+    }
+  }
+}
+.swiper {
+  &-wrapper {
+    transition-timing-function: linear;
+  }
+}
+// .swiper {
+//   background-color: #000;
+// }
+// .swiper-wrapper {
+//   transition-timing-function: linear;
+// }

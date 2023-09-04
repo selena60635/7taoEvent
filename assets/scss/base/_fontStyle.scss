@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Yeseva+One&display=swap");
+
+span,
+p {
+  font-family: "Noto Sans TC", sans-serif;
+}
+.font {
+  &-title {
+    font-family: "Noto Serif TC", serif;
+  }
+  &-content {
+    font-family: "Noto Sans TC", sans-serif;
+  }
+  &-en {
+    font-family: "Yeseva One", cursive;
+  }
+}
